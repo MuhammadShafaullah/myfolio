@@ -1,1 +1,0 @@
-web: gunicorn my_folio.wsgi --log-file -
