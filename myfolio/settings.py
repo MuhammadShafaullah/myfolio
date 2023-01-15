@@ -11,10 +11,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-u+s!e%y4c!jc#i%xos1ht=%0%5f_r5=fuh4%!a_6@@__op%!v^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 #ALLOWED_HOSTS = ['127.0.0.1']
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']  #vercel
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']  #vercel added
+
 
 
 # Application definition
@@ -65,10 +66,10 @@ WSGI_APPLICATION = 'myfolio.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    #'default': {
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': BASE_DIR / 'db.sqlite3',
+    #}
 }
 
 
@@ -121,9 +122,8 @@ STATIC_URL = 'static/'
 MEDIA_URL = "/media/"                             #added
 MEDIA_ROOT = BASE_DIR / ""                        #added
 
-STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),   #vercel
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static') #vercel
-
+STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),   #vercel added
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')#vercel added
 
 
 #-----end
